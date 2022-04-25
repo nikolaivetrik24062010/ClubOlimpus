@@ -84,7 +84,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/groupEditText"
+            android:id="@+id/sportEditText"
             android:layout_width="0dp"
             android:hint="Group"
             android:layout_height="wrap_content"

@@ -1,6 +1,7 @@
 package com.example.clubolimpus.data;
 
 
+import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
@@ -32,7 +33,12 @@ public final class ClubOlimpusContract {
         public static final int GENDER_MALE = 1;
         public static final int GENDER_FEMALE = 2;
 
-        public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_MEMBERS);
+        public static final Uri CONTENT_URI =
+                Uri.withAppendedPath(BASE_CONTENT_URI, PATH_MEMBERS);
 
+        public static final String CONTENT_MULTIPLE_ITEMS =
+                ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + AUTHORITY + "/" + PATH_MEMBERS;
+        public static final String CONTENT_SINGLE_ITEM =
+                ContentResolver.ANY_CURSOR_ITEM_TYPE + "/" + AUTHORITY + "/" + PATH_MEMBERS;
     }
 }
